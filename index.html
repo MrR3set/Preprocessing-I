@@ -1,19 +1,165 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
 
-  <title>My Resume</title>
+    <link rel="stylesheet" href="/css/index.css">
 
-  <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+    <!-- Nav bar -->
+    <div class="navContainer">
+        <div class="navbar">
+            <div class="hambg-menu">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-items"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-items"><a href="#experience" class="nav-link">experience</a></li>
+                <li class="nav-items"><a href="#contact" class="nav-link">Contact me</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Nav bar -->
+
+    <header class="mainheader" id="home">
+        <img src="/img/Profpic.jpg" alt="profile Picture">
+        <div class="name">
+            <h1>Bairon Paz</h1>
+            <p>what we do now, echoes into eternity</p>
+        </div>
+    </header>
+
+    <main class="skill-section" id="skill">
+        <section class="aboutme">
+            <h1>Why me?</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus unde asperiores aspernatur nobis sed, eligendi hic inventore tempora dignissimos debitis eius numquam est magni? Impedit, voluptatum. Earum enim id saepe, possimus eius repudiandae
+                necessitatibus dicta.</p>
+            <a href="https://mrr3set.github.io/responsive-web-design-I-stretchtask/#"><button>Learn More</button></a>
+        </section>
+
+        <section class="skills-container">
+            <h1>Skills</h1>
+            <div class="skillbox">
+                <div class="skill">
+                    <h2>HTML & CSS</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="skill">
+                    <h2>Javascript</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="skill">
+                    <h2>C/C++ and C#</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="skill">
+                    <h2>Java</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="experience-section" id="experience">
+        <section class="experience-container">
+            <h1>Previous experience</h1>
+            <ul class="list-title">
+                <li>Yrs</li>
+                <li>Company</li>
+                <li>Title</li>
+            </ul>
+            <ul class="list-job">
+                <li>3</li>
+                <li>Self-employed</li>
+                <li>Freelancer developer</li>
+            </ul>
+            <ul class="list-job">
+                <li>2</li>
+                <li>Tecnocasa</li>
+                <li>Real-estate agent</li>
+            </ul>
+            <ul class="list-job">
+                <li>1</li>
+                <li>Radial Inc.</li>
+                <li>Warehouse associate</li>
+            </ul>
+            <ul class="list-job">
+                <li>5</li>
+                <li>C.A.R Madrid</li>
+                <li>Professional athlete</li>
+            </ul>
+        </section>
+    </section>
+
+
+
+
+
+    <section class="contact-section" id="contact">
+        <h1>Want to contact me?</h1>
+
+
+
+        <form action="">
+
+            <div class="top">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+            </div>
+            <div class="bot">
+                <textarea name="message" placeholder="Message" rows="6"></textarea>
+            </div>
+            <input type="submit" value="Send Message" />
+
+
+        </form>
+    </section>
+
+
+
+
+
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
+<script src="js/navbar.js"></script>
+
+
+
+
 </html>
++

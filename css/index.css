@@ -1,1 +1,513 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #121212;
+  color: white;
+}
+.mainheader,
+.skill-section,
+.experience-section,
+.contact-section {
+  margin: 0 auto 3% auto;
+  width: 80%;
+}
+@media (max-width) {
+  .mainheader,
+  .skill-section,
+  .experience-section,
+  .contact-section {
+    width: 95%;
+  }
+}
+.navbar {
+  width: 25%;
+  height: 100%;
+  background-color: #262626e1;
+  position: fixed;
+  top: 0;
+  right: -45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s cubic-bezier(1, 0, 0, 1);
+  z-index: 99;
+}
+@media (max-width: 900px) {
+  .navbar {
+    width: 45%;
+    border-radius: 0;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    width: 100%;
+    right: -100%;
+  }
+}
+.navbar .hambg-menu {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 99;
+}
+.navbar .hambg-menu:hover .line {
+  background-color: tomato;
+}
+.navbar .hambg-menu .line {
+  width: 100%;
+  height: 0.3rem;
+  background-color: coral;
+  transition: all 0.8s;
+}
+.navbar .nav-list {
+  text-align: end;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navbar .nav-list .nav-items {
+  list-style: none;
+  margin: 15% 0;
+}
+.navbar .nav-list .nav-items .nav-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: coral;
+  font-weight: 300%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  padding: 3px 0;
+}
+.navbar .nav-list .nav-items .nav-link:hover {
+  color: tomato;
+}
+.navbar .nav-list .nav-items .nav-link::after,
+.navbar .nav-list .nav-items .nav-link::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: tomato;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navbar .nav-list .nav-items .nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.navbar .nav-list .nav-items .nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+.navbar .nav-list .nav-items .nav-link:hover::before,
+.navbar .nav-list .nav-items .nav-link:hover::after {
+  transform: scaleX(1);
+}
+.change {
+  right: 0;
+}
+.change .line1 {
+  transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  transform: rotateZ(45deg) translate(-8px, -6px);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  height: 20vh;
+  border-radius: 50%;
+}
+@media (max-width: 540px) {
+  header img {
+    display: none;
+  }
+}
+header .name {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .name h1 {
+  font-size: 4.5rem;
+  letter-spacing: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  text-transform: capitalize;
+}
+@media (max-width: 1000px) {
+  header .name h1 {
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 700px) {
+  header .name h1 {
+    letter-spacing: 0;
+  }
+}
+header .name p {
+  font-family: 'Roboto Mono', monospace;
+  font-style: italic;
+  font-size: 1rem;
+}
+@media (max-width: 540px) {
+  header .name p {
+    font-size: 1rem;
+  }
+}
+.skill-section {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .skill-section {
+    flex-direction: column;
+  }
+}
+.skill-section section {
+  width: 45%;
+  padding-bottom: 5%;
+}
+@media (max-width: 800px) {
+  .skill-section section {
+    width: 100%;
+  }
+}
+.skill-section h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+.skill-section .aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.skill-section .aboutme p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  text-align: left;
+  margin: 6% 0;
+  line-height: 1.4rem;
+}
+.skill-section .aboutme button {
+  padding: 9px 25px;
+  background-color: #0088a9;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: coral;
+}
+.skill-section .aboutme button:hover {
+  background-color: tomato;
+}
+.skill-section .skills-container {
+  display: flex;
+  flex-direction: column;
+}
+.skill-section .skills-container .skillbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .skill-section .skills-container .skillbox {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.skill-section .skills-container .skillbox .skill {
+  padding-top: 5%;
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .skill-section .skills-container .skillbox .skill {
+    width: 100%;
+    padding-top: 10%;
+    text-align: center;
+  }
+}
+.skill-section .skills-container .skillbox .skill h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.skill-section .skills-container .skillbox .skill p {
+  font-family: 'Roboto Mono', monospace;
+}
+.experience-container {
+  text-align: left;
+  padding-bottom: 6%;
+}
+.experience-container h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.experience-container ul {
+  border-bottom: 1px solid rgba(128, 128, 128);
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2% 0;
+}
+.experience-container li {
+  width: 30%;
+  font-family: 'Roboto Mono', monospace;
+}
+.experience-container .list-title {
+  font-family: 'Nunito Sans', sans-serif;
+  text-transform: uppercase;
+  color: coral;
+  font-weight: 700;
+}
+.contact-section {
+  padding: 6%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: initial;
+}
+.contact-section form {
+  padding: 3% 0;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-section form .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  .contact-section form .top {
+    flex-direction: column;
+  }
+}
+.contact-section form .top input {
+  width: 47%;
+  background: none;
+  border-radius: 4px;
+  border: solid 1px rgba(224, 224, 224, 0.75);
+  color: white;
+  outline: 0;
+  padding: 0.75em;
+}
+@media (max-width: 500px) {
+  .contact-section form .top input {
+    width: 100%;
+    margin-bottom: 3%;
+  }
+}
+.contact-section form .bot textarea {
+  width: 100%;
+  margin-bottom: 3%;
+  background: none;
+  border-radius: 4px;
+  border: solid 1px rgba(224, 224, 224, 0.75);
+  outline: 0;
+  padding: 1em 2em;
+  color: white;
+}
+.contact-section form .top input:focus,
+.contact-section form .bot textarea:focus {
+  border-color: coral;
+}
+.contact-section form input[type="submit"] {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  color: #dddddd;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.225em;
+  background: coral;
+  padding: 3% 10%;
+  align-self: center;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.contact-section form input[type="submit"]:hover {
+  background-color: tomato;
+}
+.contact-section form input[type="submit"]:active {
+  background: coral;
+}
